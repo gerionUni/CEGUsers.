@@ -11,11 +11,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using MMTShop.Models;
+using CEGUsers.Models;
 using Swashbuckle.AspNetCore.Swagger;
 using Microsoft.OpenApi.Models;
 
-namespace MMTShop
+namespace CEGUsers
 {
     public class Startup
     {
@@ -29,27 +29,35 @@ namespace MMTShop
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<MMTShopContext>
-               (opt => opt.UseSqlServer(Configuration["Data:MMTShopConnection:ConnectionString"]));
+            //services.AddDbContext<CEGUsersContext>
+            //   (opt => opt.UseSqlServer(Configuration["Data:CEGUsersConnection:ConnectionString"]));
+            services.AddDbContext<CEGUsersContext>(options =>
+            {
+                options.UseSqlite("Data Source = CEGUsers.db");
+
+            });
             services.AddControllers();
+            services.AddScoped<CEGUsersContext>();
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo
                 {
                     Version = "v1",
-                    Title = "MMTShop API",
-                    Description = "MMTShop API provides methods to handle products",
+                    Title = "CEGUsers API",
+                    Description = "CEGUsers API provides methods to handle users",
                     Contact = new OpenApiContact
                     {
-                        Name = "MMTShop",
-                        Email = "info@MMTShop.com",
+                        Name = "CEGUsers",
+                        Email = "info@CEGUsers.com",
                     },
                 });
+                var filePath = System.IO.Path.Combine(System.AppContext.BaseDirectory, "CEGUsers.xml");
+                c.IncludeXmlComments(filePath);
             });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, CEGUsersContext dataContext)
         {
             if (env.IsDevelopment())
             {
@@ -57,7 +65,8 @@ namespace MMTShop
             }
 
             app.UseHttpsRedirection();
-
+            app.UseStaticFiles();
+            dataContext.Database.Migrate();
             app.UseRouting();
 
             app.UseAuthorization();
@@ -70,7 +79,7 @@ namespace MMTShop
 
             app.UseSwaggerUI(c =>
             {
-                c.SwaggerEndpoint("/swagger/v1/swagger.json", "MMTShopAPI");
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "CEGUsersAPI");
             });
         }
     }

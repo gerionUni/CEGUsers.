@@ -17,14 +17,21 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "MMTShop": {
+    "CEGUsers": {
       "commandName": "Project",
       "launchBrowser": true,
-      "launchUrl": "api/MMTShop",
+      "launchUrl": "api/CEGUsers",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
       "applicationUrl": "https://localhost:5001;http://localhost:5000"
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "publishAllPorts": true,
+      "useSSL": true
     }
   }
 }

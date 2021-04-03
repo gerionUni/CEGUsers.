@@ -6,7 +6,6 @@ C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\MMTShop.runt
 C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\MMTShop.runtimeconfig.dev.json
 C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\MMTShop.dll
 C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\MMTShop.pdb
-C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.csprojAssemblyReference.cache
 C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.AssemblyInfoInputs.cache
 C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.AssemblyInfo.cs
 C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.csproj.CoreCompileInputs.cache
@@ -89,3 +88,4 @@ C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\Swashbuckle.
 C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\gerio\source\repos\MMTShop\MMTShop\bin\Debug\netcoreapp3.1\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\gerio\source\repos\MMTShop\MMTShop\obj\Debug\netcoreapp3.1\MMTShop.csprojAssemblyReference.cache

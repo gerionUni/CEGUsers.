@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CEGUsers</name>
+    </assembly>
+    <members>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.GetUserAddresses(System.Int32)">
+            <summary>
+            GET all addresses for a user
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.GetAllUsers">
+            <summary>
+            GET all users in the db
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.GetUser(System.Int32)">
+            <summary>
+            Get a single user
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.AddUser(System.String,System.String,System.DateTime)">
+            <summary>
+            Add a new User
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.AddUserAddress(System.Int32,System.DateTime,System.DateTime,System.String,System.String)">
+            <summary>
+            Add a new address for a user
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.DeleteUser(System.Int32)">
+            <summary>
+            DELETE a user
+            </summary>
+        </member>
+        <member name="M:CEGUsers.Controllers.CEGUsersController.DeleteAddress(System.Int32)">
+            <summary>
+            delete single address
+            </summary>
+        </member>
+    </members>
+</doc>
